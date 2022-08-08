@@ -79,28 +79,16 @@ class MovesenseActivity : ComponentActivity() {
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-                    Box{
-                        Text(fontSize = 22.sp, text = "Movesense device")
-                    }
-                    Box{
-                        Text(fontSize = 22.sp, text = deviceName)
-                    }
+                    Text(fontSize = 22.sp, text = "Movesense device")
+                    Text(fontSize = 22.sp, text = deviceName)
                     Spacer(modifier = Modifier.padding(30.dp))
-                    Box{
-                        Text(text = "Angle from accelerometer:")
-                    }
+                    Text(text = "Angle from accelerometer:")
                     Spacer(modifier = Modifier.padding(10.dp))
-                    Box{
-                        Text(fontSize = 20.sp,text = df.format(accAngle)+"\u00b0")
-                    }
+                    Text(fontSize = 20.sp,text = df.format(accAngle)+"\u00b0")
                     Spacer(modifier = Modifier.padding(10.dp))
-                    Box{
-                        Text(text = "Angle from accelerometer and gyroscope:")
-                    }
+                    Text(text = "Angle from accelerometer and gyroscope:")
                     Spacer(modifier = Modifier.padding(10.dp))
-                    Box{
-                        Text(fontSize = 20.sp,text = df.format(combinedAngle)+"\u00b0")
-                    }
+                    Text(fontSize = 20.sp,text = df.format(combinedAngle)+"\u00b0")
                     Spacer(modifier = Modifier.padding(10.dp))
                     Button(onClick = { startRecording()}, colors = ButtonDefaults.buttonColors(
                         backgroundColor = if (movesenseViewModel.isRecording.value) Color.Red else Color.Green
